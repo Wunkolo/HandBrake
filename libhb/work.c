@@ -269,6 +269,8 @@ hb_work_object_t* hb_video_encoder(hb_handle_t *h, int vcodec)
         case HB_VCODEC_QSV_H264:
         case HB_VCODEC_QSV_H265:
         case HB_VCODEC_QSV_H265_10BIT:
+        case HB_VCODEC_QSV_VP9:
+        case HB_VCODEC_QSV_VP9_10BIT:
         case HB_VCODEC_QSV_AV1:
         case HB_VCODEC_QSV_AV1_10BIT:
             w = hb_get_work(h, WORK_ENCQSV);
@@ -578,6 +580,8 @@ void hb_display_job_info(hb_job_t *job)
                 case HB_VCODEC_QSV_H264:
                 case HB_VCODEC_QSV_H265:
                 case HB_VCODEC_QSV_H265_10BIT:
+                case HB_VCODEC_QSV_VP9:
+                case HB_VCODEC_QSV_VP9_10BIT:
                 case HB_VCODEC_QSV_AV1:
                 case HB_VCODEC_QSV_AV1_10BIT:
                 case HB_VCODEC_FFMPEG_VCE_H264:
@@ -613,6 +617,8 @@ void hb_display_job_info(hb_job_t *job)
                 case HB_VCODEC_QSV_H264:
                 case HB_VCODEC_QSV_H265:
                 case HB_VCODEC_QSV_H265_10BIT:
+                case HB_VCODEC_QSV_VP9:
+                case HB_VCODEC_QSV_VP9_10BIT:
                 case HB_VCODEC_QSV_AV1:
                 case HB_VCODEC_QSV_AV1_10BIT:
                 case HB_VCODEC_FFMPEG_VCE_H264:

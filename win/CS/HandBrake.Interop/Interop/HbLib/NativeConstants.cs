@@ -42,7 +42,8 @@ namespace HandBrake.Interop.Interop.HbLib
         public const uint HB_ACODEC_OPUS_PASS = (HB_ACODEC_PASS_FLAG | HB_ACODEC_OPUS);
 
         // Video Encoders
-        public const uint HB_VCODEC_AV1_MASK  = 0x40000000;
+        public const uint HB_VCODEC_AV1_MASK  = 0x80000000;
+        public const uint HB_VCODEC_VP9_MASK  = 0x40000000;
         public const uint HB_VCODEC_H264_MASK = 0x20000000;
         public const uint HB_VCODEC_H265_MASK = 0x10000000;
         public const uint HB_VCODEC_QSV_MASK  = 0x00040000;
@@ -50,8 +51,10 @@ namespace HandBrake.Interop.Interop.HbLib
         public const uint HB_VCODEC_QSV_H264 = (0x00000060 | HB_VCODEC_QSV_MASK | HB_VCODEC_H264_MASK);
         public const uint HB_VCODEC_QSV_H265 = (0x00000061 | HB_VCODEC_QSV_MASK | HB_VCODEC_H265_MASK);
         public const uint HB_VCODEC_QSV_H265_10BIT = (0x00000062 | HB_VCODEC_QSV_MASK | HB_VCODEC_H265_MASK);
-        public const uint HB_VCODEC_QSV_AV1 = (0x00000070 | HB_VCODEC_QSV_MASK | HB_VCODEC_AV1_MASK);
-        public const uint HB_VCODEC_QSV_AV1_10BIT = (0x08000071 | HB_VCODEC_QSV_MASK | HB_VCODEC_AV1_MASK);
+        public const uint HB_VCODEC_QSV_VP9 = (0x00000070 | HB_VCODEC_QSV_MASK | HB_VCODEC_VP9_MASK);
+        public const uint HB_VCODEC_QSV_VP9_10BIT = (0x00000071 | HB_VCODEC_QSV_MASK | HB_VCODEC_VP9_MASK);
+        public const uint HB_VCODEC_QSV_AV1 = (0x00000080 | HB_VCODEC_QSV_MASK | HB_VCODEC_AV1_MASK);
+        public const uint HB_VCODEC_QSV_AV1_10BIT = (0x08000081 | HB_VCODEC_QSV_MASK | HB_VCODEC_AV1_MASK);
 
         // Muxers
         public const uint HB_MUX_MASK_MP4 = 0x030000;

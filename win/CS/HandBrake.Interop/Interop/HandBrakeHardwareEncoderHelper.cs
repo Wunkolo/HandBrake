@@ -173,6 +173,38 @@ namespace HandBrake.Interop.Interop
             }
         }
         
+        public static bool IsQsvAvailableVP9
+        {
+            get
+            {
+                try
+                {
+                    return (HBFunctions.hb_qsv_available() & NativeConstants.HB_VCODEC_QSV_VP9) > 0;
+                }
+                catch (Exception)
+                {
+                    // Silent failure. Typically this means the dll hasn't been built with --enable-qsv
+                    return false;
+                }
+            }
+        }
+        
+        public static bool IsQsvAvailableVP910bit
+        {
+            get
+            {
+                try
+                {
+                    return (HBFunctions.hb_qsv_available() & NativeConstants.HB_VCODEC_QSV_VP9_10BIT) > 0;
+                }
+                catch (Exception)
+                {
+                    // Silent failure. Typically this means the dll hasn't been built with --enable-qsv
+                    return false;
+                }
+            }
+        }
+
         public static bool IsQsvAvailableAV1
         {
             get
